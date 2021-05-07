@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>map_creator</title>
+    <script src="map_creator.js"></script>
+</head>
+<body>
+    <canvas id="map" width="1600" height="900" style="display: block; background: #EEEDDE; border: 1px solid black; margin-left: auto; margin-right: auto"></canvas>
+    <div id="brush_list" style="float: left">
+        <input type="radio" id="sq" name="brush" value="square" checked>
+        <label for="sq">Square</label><br>
+        <input type="radio" id="circle" name="brush" value="circle">
+        <label for="circle">Circle</label>
+        <input type="radio" id="eraser" name="brush" value="eraser">
+        <label for="eraser">Eraser</label>
+    </div>
+    <div id="grid_cont" style="float: left; margin-left: 36px;">
+        <input type="checkbox" id="snap" name="Snap">
+        <label for="Snap">Snap to grid</label>
+    </div>
+</body>
+</html>

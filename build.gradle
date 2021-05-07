@@ -1,0 +1,32 @@
+plugins {
+    id 'org.jetbrains.kotlin.js' version '1.4.32'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-js"
+    testImplementation "org.jetbrains.kotlin:kotlin-test-js"
+
+    //Fill this in with the version of kotlinx in use in your project
+    def kotlinx_html_version = "0.6.12"
+
+    // include for client-side
+    implementation("org.jetbrains.kotlinx:kotlinx-html-js:${kotlinx_html_version}")
+
+    implementation npm("poisson-disk-sampling", "2.2.2")
+
+}
+
+kotlin {
+    js {
+        browser()
+        binaries.executable()
+    }
+}
